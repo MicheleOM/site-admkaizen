@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
+  const navMenuLinks = document.querySelectorAll(".nav-links a");
 
+  // Função para fechar o menu
+  const closeMenu = () => {
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("active");
+  };
+
+  // Abrir/fechar o menu ao clicar no botão hb
   menuToggle.addEventListener("click", () => {
-    // Adiciona/remove a classe 'active' para mostrar/esconder o menu
     navLinks.classList.toggle("active");
-    // Adiciona/remove a classe 'active' para animar o ícone do hambúrguer para 'X'
     menuToggle.classList.toggle("active");
+  });
+
+  // Fechar o menu ao clicar em um dos links
+  navMenuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 });
