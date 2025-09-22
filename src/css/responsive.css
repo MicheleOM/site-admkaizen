@@ -42,10 +42,18 @@
 /* telas (até 768px)*/
 
 @media (max-width: 768px) {
+  .section-full .container h1 {
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    line-height: 1.2;
+  }
+  .section-full .container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
   .section {
     padding: 40px 0;
   }
-
   .section h2 {
     font-size: 1.9em;
   }
@@ -93,6 +101,14 @@
     height: 50px;
   }
 
+  .kai-zen-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
@@ -122,15 +138,33 @@
 /* celulares (até 480px) */
 
 @media (max-width: 480px) {
+  .section-full .container h1 {
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    line-height: 1.2;
+  }
+  .section-full .container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
   .section h2 {
     font-size: 1.6em;
   }
   .top-bar .container {
     flex-direction: column;
+    text-align: center;
     gap: 10px;
   }
   .main-nav .logo img {
     height: 40px;
+  }
+
+  .kai-zen-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
   }
 
   .services-grid {
@@ -169,5 +203,10 @@
   }
   .social-links-contact {
     justify-content: center;
+  }
+  .contact-info-block .info-list li a,
+  .contact-info-block .info-list li {
+    display: inline-flex;
+    align-items: center;
   }
 }
